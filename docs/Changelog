@@ -1,0 +1,262 @@
+Changelog:
+----------
+0.9.13b (2008-06-25) Minor fixes
+  - Added javascript generator for remote HTML inclusion (ie: random thumbnail)
+  - Added Flash Video Player as 3rd part component to support FLV videos
+  - Fixed bug with MySQL authentication and password hash
+  - Fixed various minor display bugs
+0.9.13a (2007-01-30) Major security fix
+  - Fixed a security bug related to vulnerability in PHP itself
+0.9.13 (2007-01-28) Minor enhancements
+  - Added captions to slideshow
+  - Modified special pages links
+  - Added possibility to generate thumbnails from the command-line
+0.9.13-rc1 (2007-01-05) Major features enhancement
+  - Added RSS Feeds support on all special pages (comments/ratings/etc.)
+  - Added Video thumbnail support (using ffmpeg)
+  - Added "Direct URLs" support for public websites with large audience
+  - Added Automatic max_execution_time increase when generating thumbnails/lowres
+  - Added Password are now stored as hashes in the DB
+  - Added URLs to display a random thumb/lowres
+  - Improved Accented characters support
+  - Improved Voting system
+  - Improved Video handling
+  - Fixed various minor bugs
+  - Fixed audio files support
+  - See https://trac.phpgraphy.org/trac/milestone/0.9.13 for complete listing
+
+0.9.12 (2006-04-17) Major security fix
+  - Fixed security bug introduced in 0.9.9 (Found by rgod)
+  - Fixed security bugs introduced in 0.9.12-rc1 (Internal security audit)
+  - Fixed minor display bugs
+  - Added Polish language (Thanks to Darek Kramin)
+  - Added Portuguese language (Thanks to Augusto Braun)
+  - Added Swedish language (Thanks to Håkan Olsson)
+  - Updated Japanese, Italian languages (See TranslatorPage for credits)
+0.9.12-rc1 (2006-03-27) Major features enhancement
+  - Added templates support (using Flat Frog, previously known as Smarty Light)
+  - Added slideshow mode
+  - Added square Thumbnails support (See thumb_aspect directive)
+  - Added automatic cover picture for directories feature (See cover_picture_mode directive)
+  - Added new rating calculation (take into account number of times a picture has been rated)
+  - Added control over action when clicking on a picture (See picture_link_action directive)
+  - Added Japanese language (Thanks to ELF)
+  - Added Danish language (Thanks to Erik Sondergaard Poulsen) 
+  - Updated Russian language (Thanks to Roman Boutyrchik)
+  - Updated IPTC support, improved compatibility
+  - Fixed code now 'short_open_tag = off' compatible
+  - Fixed bugs with the users management interface
+  - Fixed bug with cookies on windows with server = localhost
+0.9.11 final (2006-01-04) Minor bugfix
+  - Fixed bug in the auto import title from metadata 
+  - Improved multi-language support for the installation process
+0.9.11-rc1 (2005-12-14) Major features enhancement
+  - Added cover picture for directories
+  - Added title support for directories
+  - Added option to customize display of thumbs (cols/rows)
+  - Added multiple sort options for both files and directories
+  - Added configuration interface, no need to edit config by hand anymore
+  - Added proper installation process with multilingual support
+  - Added themes support
+  - Added config option: minimum level to post comments
+  - Added config option: highest rating
+  - Added *experimental* new pictures/pictures per directory page
+  - Added support for db_prefix with MySQL
+  - Improved GD generation (now working even with safe_mode to on)
+  - Improved debugging messages (especially for thumbs generation / login)
+  - Improved internal code for validating data (config/user_input)
+  - Improved file layout, now more splited to facilitate upgrade
+  - Improved title auto-import from IPTC/EXIF
+  - Improved XHTML/CSS (now more than 98% is W3C valid)
+  - Fixed don't try to generate thumbnail for non-pictures files.
+  - Fixed security bug related to internal security levels
+  - Fixed various bugs with lastcomment/topratings when using MySQL
+  
+0.9.10a (2005-10-18) Minor bugfix
+  - Added Dutch language (thx to Floris Lambrechts)
+  - Added Hebrew language (thx to Tom Stella)
+  - Fixed bug when the current directory wasn't in PHP include_path
+  - Fixed bug in FileDB functions affecting the topratings page
+  - Fixed bugs in MySQL functions (On the last_commented page and when
+  deleting pictures)
+  - Fixed security checks to be less restrictive
+
+0.9.10 final (2005-07-23) Minor bugfix
+  - 0.9.10-rc1 was released as final execept for the bugs listed below
+  - Fixed various bugs (#1237611, #1237606, #1237597) in the picture rotation code
+    (Thx to lenaz for reporting)
+
+0.9.10-rc1 (2005-07-03) Major features enhancement
+  - Added Users management via the web interface (Code by Oniryx)
+  - Added Lossless picture rotation support (via exiftran or jpegtran)
+  - Added Multiple files upload (via the Web interface)
+  - Added Easier installation procedure (DB struct creation for MySQL, admin account setup)
+  - Added XHTML 1.1 standard respect
+  - Added Spanish language (Thx to Vincenzo)
+  - Added Russian language (Thx to Max)
+  - Improved No more dependency with register_globals
+  - Improved Security Checks (Thx to Matt for reporting some minors flaws)
+  - Fixed Lot of minors bugfix
+
+0.9.9a (2005-05-21) Minor bugfix
+  - Added german and italian language files
+  - Fixed SF bug #1181369 pb with next/previous links on pictures located in $root_dir
+  - Fixed little security bug with random pic function
+  - Fixed bug in lastcommented pictures with file db (Not limiting to X last
+  pictures)
+
+0.9.9 final (2005-03-21)
+  - 0.9.9-rc2 was released as final except for the little bugfix below
+  - Fixed small bug with PHP5 in the new function used by random and genall mode
+
+0.9.9-rc2 (2005-03-12)
+  - Removed two remaining system() calls, now random and genall functions should work
+    on every platform.
+  - Fixed a bug with both $use_iptc & $use_exif switched off (#1159099)
+  - Fixed a bug in the topratings page (#1157674)
+  - Fixed a bug in the lastcommented page when in file mode
+  - Fixed small bug in lang_fr.inc.php (hard coded icones path)
+  - Added $txt_show_me_more in language file
+  - Added CSS #dirlist id
+
+0.9.9-rc1 (2005-03-02)
+  - Added a function to edit .welcome file from the interface (PHP >=4.3.0 required)
+  - Added a function to (recursively) delete directories from the interface
+  - Added an option to remember the name for visitors posting comments to your site
+    (this should be very handy for your regulars users (even without being logged-in)
+  - Added $highres_min_level variable, so you can set which users must have in order
+    to be able to see High-Resolution pictures
+  - Added $use_comments variable so you can disable users comments
+  - Added the possibility to add/copy file from URL's (PHP >=4.3.0 required)
+  - Added a lot of text variables (and also restructured languages files)
+    refeer to documentation for details
+  - Added IPTC metadata handling (Auto-importing the IPTC field of your choice into
+    the database as you add new file, or regenerate thumbs)
+    (thx to Adam S. for suggestion and testing help)
+  - Added 'auto' mode for thumb_generator, this will try to detect automatically
+    a thumb/lowres method, set by default in the config
+  - Added session support as authentication method (cookie is still also
+    available)
+  - Added automatic redirection to login page when trying to view an unauthorized
+    picture (thx to Gael C. for suggestion)
+  - Improved the exif function, completely rewritten so you can now customize the
+    fields you want to display, work in the same way as IPTC)
+  - Improved the HTML/CSS code 
+    (now W3C certified HTML/4.01 & CSS/2 for visitor side)
+  - Improved the conversion code for GD (You'll now get true colors lowres/thumbs)
+  - Improved the upload function (it should now work on more PHP config)
+  - Improved a lot of code (it's now more PHP >= 4.1.0 optimized)
+  - Fixed when in random mode, if you click on the picture you get another random
+    picture, not the next one in the directory
+  - Fixed a lot of minors bugs
+
+0.9.8a (2005-01-19) Display bug
+  - Corrected a small display bug with numbers of comments per pictures
+    The following text variable was in the language file but not into the code...
+    $txt_x_comments
+
+0.9.8 (2005-01-19) Minors corrections from pre5
+  - Added more text to the language file (lang_en.inc.php)
+    $txt_last_commented, $txt_top_rated, $txt_comment_by, $txt_comments,
+    $txt_go_back
+  - Added french language (lang_fr.inc.php) due to popular demand
+  - Added thumbnails to the Top rated pictures
+    (in the same style as last commented)
+  - Added a check that ensure you've changed the default admin password
+
+0.9.8-pre5 (2005-01-06) Now maintened by JiM / aEGIS 
+  - Added a brand new fast text file database support ! no more MySQL dependency
+    and also makes phpGraphy a LOT faster! (Still in beta phase)
+  - Added convert_to_file.php script to convert your existing MySQL database
+    to the new fast text database
+  - Added in config.inc.php
+     $convert_path (if autodetection fail)
+     $data_dir (only with db_file, to change the location of you data directory)
+  - Added a lot of checks to make your life easier if something isn't working
+  - Added filetypes.inc.php for customizing filetypes
+  - Added, now display the numbers of sub directories and files per directory
+  - Added "Regen thumb" button to actually delete an image thumb and lr if you're
+    not happy with the current ones
+  - Added EXIF data support 
+    (with a global sensors file wich permits nice display for a lot of cameras,
+     if you camera isn't handled, add it yourself and/or contact me so I can 
+  - Improved, all previous versions used mysql_connect instead mysql_pconnect
+    fixed that so you should get a noticeable performance improvement
+  - Moved all db-related stuff in their own include files
+  - Improved, moved all text variables in a language file instead of config 
+     (also added two variables $txt_delete_photo_thumb and $txt_inh_lev)
+  - Improved filetypes handling
+  - Improved the way to display .welcome files by using an include instead of
+  - Improved "Last comments" function
+      Handle a directory argument to only display related comments
+      Don't display more than once a picture (even if commented multiple times)
+      Now display a thumbnail for each commented picture
+  - Improved navigation functions
+      Added page number when in thumbs mode
+      Added an Up link to switch back from single picture to thumbs mode
+      Added a link to the next picture when clicking on the current one
+  - Improved Security Level handing by adding the notion of "Inherited Level"
+    so you know what minimum level the user need to have to view the dir/pic
+    and don't change the security level picture by picture if not needed
+  - Improved default convert options to get smallers thumbs/lowres pictures
+  - Fixed a lot of bugs
+  - Fixed php 4.1.0 functions access (thanks to Esben Peter Hansen)
+    the previous system call.
+  - Modified, now need to be logged in to be able to view high res pictures
+     add it for the next release)
+
+0.9.7 (2001-10-15)
+  - Fixed directory security level change bug
+  - Fixed (finally) the "next/previous after random picture" bug
+  - Added sound, video and text files support (thanks to Thomas Devanneaux!)
+
+0.9.6 (10/10/2001)
+  - Added top rated page (make a link to index.php?topratings=1)
+  - Fixed a small bug when linking a blank commented picture
+  - Better error messages when using GD library (thanks to ouline)
+  - Added pic deletion thru admin interface (thanks to ouline)
+  - Added some admin interface text configurable in config.inc.php
+
+0.9.5 (28/09/2001)
+  - Small bugfix in random picture and automatic generation
+  - Should work on Solaris now (Thanks to Kenny Root)
+  - Some html "security" holes fixed
+  - Pictures ratings! (Thanks to sIX)
+  - Unnastified source files from DOS carriage returns
+  - Other minor bugfixes
+  NOTE: If upgrading from previous version, be sure to run
+        the ratings table SQL query in sql_tables
+
+0.9.4 (02/02/2001)
+  - Latest comments now display the image description
+  - Added random picture feature
+  - Bugfixed security level system
+  - Fixed empty user comments
+  - You can now generate all thumbnails/low res pictures at once
+     through the admin interface
+
+0.9.3 (01/25/2001)
+  - Now backward compatible with PHP 3.0.18 (thanks to Alex Martin)
+  - Some text variables added to config file for more customization power
+  - Admin can now delete unwanted comments
+  - Image sorting can now be reversed thru a ".desc" file (thanks to Merou)
+  - No more restricted to ImageMagick; added libgd support and image convertor 
+  - Can now be either "convert", "GD" or "manual" for platforms that don't 
+    have ImageMagick nor libgd.
+
+0.9.2 (01/24/2001)
+  - Works with the latest ImageMagick (thanks to Paul Horbal)
+  - Added 2nd image comment. see usage
+  - Semaphore stuff is now optional since too many people had problems with it
+  - Should work on a lot more systems and providers
+
+0.9.1 (10/11/2000)
+  - mued added convert auto detection
+
+0.9 (10/10/2000) Christophe Thibault
+  - First release
+
+-------------------------------------------------------
+(c) 2004-2007   JiM / aEGIS (jim _at_ aegis _hyphen_ corp _dot_ org) and phpGraphy DevTeam
+(c) 2000-2001	Christophe Thibault (christophe@nullsoft.com)
+All rights reserved.

@@ -1,0 +1,4 @@
+Everything starting from this directory is part of the flat-frog project
+(http://sourceforge.net/projects/flatfrog).
+
+It does only contains the minimum required files, some plugins have been removed (function.html_*) to save space and loading time.

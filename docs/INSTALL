@@ -1,0 +1,31 @@
+phpGraphy - Quick Install Instructions
+--------------------------------------
+
+This file contains the minimum set of instructions to install phpGraphy,
+for full instructions please read the manual accessible either online
+at http://phpgraphy.sourceforge.net or under the docs/ directory.
+
+
+
+Requirements:
+
+ - A WebServer with PHP 4.1.0 or greater (PHP 4.3.0 recommended)
+
+
+
+Installation:
+
+Get the latest phpgraphy tarball and upload it to your webserver. Once it's online,
+simply open your webbrowser to the location where you've install phpGraphy.
+It should detect the new installation by itself, in case it doesn't, specifically
+request "install.php".
+
+Then follow the instructions which are given to you.
+
+If you've unresovable problems, then go to http://phpgraphy.sourceforge.net
+and click on the link to get help !
+
+-------------------------------------------------------
+(c) 2004-2007   JiM / aEGIS (jim _at_ aegis _hyphen_ corp _dot_ org) and phpGraphy DevTeam
+(c) 2000-2001   Christophe Thibault (christophe _at_ nullsoft _dot_ com)
+All rights reserved.

@@ -1,0 +1,166 @@
+phpGraphy - Upgrade procedure :
+-------------------------------
+
+!!! IMPORTANT !!! IMPORTANT !!!
+
+  Before doing anything, BACKUP your actual phpgraphy directory (so in case something
+  goes wrong by following instructions here, you're able to restore the previous state)
+
+!!! IMPORTANT !!! IMPORTANT !!!
+
+*********
+ Summary
+*********
+
+List of instructions available when migrating from version x to version y, 
+changes can be either "Code change" and/or "Database structure change", 
+when there is only "Code change", this means that you don't have to do much
+but to overwrite files with the new content
+
+0.9.10+    -> 0.9.13 (Code change)
+0.9.9      -> 0.9.10 (Code change)
+0.9.8      -> 0.9.9  (Code change)
+0.9.7      -> 0.9.8  (Code change)
+
+
+************
+ Procedures
+************
+
+---------------------------
+From version 0.9.10+ to 0.9.13
+
+  Instructions will now be generic, basically the idea is that we only support 
+  'standard' modifications which are listed below:
+
+    - Create a new theme (by using the default one as starting point)
+    - Change your configuration file (conf/config.ini.php)
+
+  Note that it's strongly recommended to copy the default theme and create a new one from it as opposed to hack the default, as it might be overwritten when upgrading resulting in the loss of your changes.
+
+  So if you haven't done anything NOT allowed, here is the process to upgrade.
+
+  As always, BACKUP BACKUP BACKUP, I can't stress this enough.
+
+  
+  2 ways of proceding :
+
+
+    1/ For lazy people:
+       Overwrite your site with the content of the new phpGraphy archive. The inconvenient of this
+       method is that with the time, you might keep a lot of unused files.
+
+    2/ For meticulous people:
+
+       Remove everything BUT the following directories:
+
+        - pictures/  That may sound obvious but you've all your pictures there, so you'd better not delete it :p
+        - data/      If you're the using the flat file mode, a part of your database is there
+        - themes/    Within this directory, you might want to remove the default/ theme in order to get the latest updates
+        - conf/      Your config file is there, it's not dramatic if you loose it but...
+        - logs/      Your log file is there, again not dramatic if you loose it  but...
+
+      Then unpack the latest version of phpGraphy over your current installation and say yes when you're asked to overwrite
+      files.
+
+  NOTE: From one version to another, some configuration directives might have changed. I'm trying to preserve an ascendant
+        compatibility as much as I can but to evolve, you've to do some sacrifices sometime. When loading your site,
+        phpGraphy will tell you if some directives are invalid, then please refer to the manual at the Configuration
+        Reference part to find out what is happening (variable is now obsolete, or format has changed, etc.)
+
+---------------------------
+From version 0.9.9 to 0.9.10
+
+  All functions files have been moved to an new include/ subdirectory, all languages
+  files have been moved to a new lang/ subdirectory, the easiest way to upgrade is:
+
+    - Backup everything (I'll never say that enough)
+
+    - Pay a special attention to all the files that you may have modified from the
+      base installation (config.inc.php, header.inc.php, footer.inc.php, phpgraphy.css)
+      as there has been some minors changes inside the default ones.
+
+    - Overwrite your phpGraphy installation with the new version (except for the pictures
+      subdirectory), for each file that you may have modified, make a diff (using your 
+      favorite diff program) to report your changes into the new versions, it is
+      especially important for the files listed above).
+
+    - Then overwrite the files from the default install with the ones you've just merged.
+
+
+---------------------------
+From version 0.9.8 to 0.9.9
+
+
+  There has been a lot of changes all around, everything in the goal to make it more
+  modular, easier to customize without touching to the core program, so if you've a 
+  picture directory from older versions, it will work with the new one.
+
+
+  Standard Procedure:
+
+    - Install the new version in a separate directory
+
+    - Copy your current 'pictures/' directory under the new installation path
+
+    - if using fast text database, copy your current 'data/' directory under the new 
+      installation path
+
+    - Edit the new 'config.inc.php' and changes the settings according your configuration.
+
+    - Open your site in a web browser and correct eventual errors messages by modifying
+      the 'config.inc.php' file.
+
+  NOTE: If you were previously loggued-in as admin on a 0.9.8 or lower version,
+        you'll have to manually delete your previous cookie in order to be able
+	to continue using the admin account.
+	(This is due to a change of the cookie structure)
+
+
+  Changed files details for heavily customized sites:
+
+  List of files that have changed:
+    - index.php
+    - lang_en.inc.php (and lang_fr.inc.php)
+    - header.inc.php 
+    - footer.inc.php
+    - db_file.inc.php
+    - db_mysql.inc.php
+    - config.inc.php
+
+  List of files that have been added/replaced:
+    - functions_global.inc.php (I'll progressivly move all functions into this files)
+    - functions_exif.inc.php has been replaced by functions_metadata.inc.php
+    - style.inc.php has been replaced by phpgraphy.css
+    - icons/delete_cross.gif
+    - icons/metadata_on.gif
+    - icons/metadata_off.gif
+
+  If you have made some customization to the language file and/or the stylesheet, then
+  you should take a look at new files, compare and put your previous changes into the 
+  new files (Note that the way language file work has changed, please read the manual
+  for details).
+
+  Here is a list of added $txt* variables:
+  $txt_dir_to_create, $txt_current_dir, $txt_upload_file_from_user, $txt_file_to_upload
+  $txt_upload_file_from_url, $txt_comment_form_name, $txt_remember_me, $txt_editing
+  $txt_in_directory, $txt_save, $txt_cancel, $txt_clear_all, $txt_gen_all_pics
+  $txt_create_dir, $txt_logout
+
+
+----------------------------
+From version 0.9.7 to 0.9.8:
+
+  Too much changes to be able to describe everything, the easiest way would be to:
+
+    - Backup your actual phpgraphy version
+    - Use your previous config file to configure the new one (many new options added but
+      all the old names have been kept, so you should be able to refill the missing values).
+    - There wasn't any database structure change so if you just start from scratch with the
+      new code and just keep your previous pictures directory/database, it should work fine.
+  
+
+-------------------------------------------------------
+(c) 2004-2007   JiM / aEGIS (jim _at_ aegis _hyphen_ corp _dot_ org) and phpGraphy DevTeam
+(c) 2000-2001	Christophe Thibault (christophe@nullsoft.com)
+All rights reserved.

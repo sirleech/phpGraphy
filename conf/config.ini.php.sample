@@ -1,0 +1,23 @@
+; <?php die() ?>
+; phpGraphy sample configuration script
+;
+; This is a .ini file but for security reasons, it has the .php extension. Copy it as config.ini.php
+; and it will automatically be taken into account by phpGraphy.
+;
+; This is where you should configure all your settings, it can be done either
+; manually but it's highly recommended to use the interface for that.
+;
+; For the list of the values, please read the manual available under the docs/
+; subdirectory or on the phpGraphy website (http://phpgraphy.sourceforge.net)
+;
+; Any non-alphanumeric characters value needs to be enclosed in double-quotes (")
+
+[installation]
+; Your IP address (given by the installation process), eg: "192.168.1.10"
+admin_ip = ""
+
+; Enable Installation Process (1 to enable, 0 to disable)
+install_mode = 1
+
+; Debug mode (0 = very quiet, 1 = normal, 2 = verbose, 3 = debug/developement)
+debug_mode = 1

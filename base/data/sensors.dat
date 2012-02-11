@@ -1,0 +1,165 @@
+# $Id: sensors.dat 359 2006-09-16 08:06:36Z jim $
+#
+# This file is used by some EXIF functions of phpgraphy
+# Get last release at http://phpgraphy.sourceforge.net
+#
+# It's used to calculate the 35mm film equivalent of a given focal lenght
+# For that it use the diagonal of the sensor size, see some examples below:
+#
+#       Size    Width  Height  Diagonal
+#
+#       1/3.2"  4.536  3.416   5.680
+#       1/2.7"  5.371  4.035   6.721
+#       1/2.5"  5.760  4.290   7.182
+#       1/1.8"  7.176  5.319   8.933  
+#       1/1.7"  7.600  5.700   9.500
+#         2/3"  8.800  6.600   11.0
+#       APS-C   23.7   15.7    28.428  (But this varies depending the brandt)
+#    35mm film  36.0   24.0    43.3
+#
+# For more details about sensor sizes, you can read this nice article:
+# http://www.dpreview.com/learn/?/key=sensor_sizes
+#
+# Lines beginning with a # or with a space are considered as comments
+# Format is: Make|Model|SensorSize (Where Make and Model are found in the exif header)
+#
+# Your camera isn't listed here ?
+# Please contact me by sending me an email (jim [at] aegis [dash] corp [dot] org) and
+# include an URL pointing to a picture taken with the given camera so I can perform 
+# some tests.
+#
+
+Asahi Optical Co.,Ltd|PENTAX Optio 430|8.933
+CASIO|QV-3000EX|8.933
+CASIO|QV-4000|8.933
+CASIO|QV-8000SX|6.0
+Canon|Canon EOS 300D DIGITAL|27.263
+Canon|Canon EOS 350D DIGITAL|26.681
+Canon|Canon EOS D30|27.263
+Canon|Canon EOS D60|27.263
+Canon|Canon EOS 10D|27.263
+Canon|Canon EOS 20D|27.263
+Canon|Canon EOS 5D|43.3
+Canon|Canon EOS-1D|34.475
+Canon|Canon EOS-1D Mark II|34.475
+Canon|Canon EOS-1Ds|43.3
+Canon|Canon EOS-1Ds Mark II|43.3
+Canon|Canon DIGITAL IXUS 300|6.592
+Canon|Canon DIGITAL IXUS 400|8.933
+Canon|Canon DIGITAL IXUS 500|8.933
+Canon|Canon DIGITAL IXUS v3|6.721
+Canon|Canon DIGITAL IXUS v|6.592
+Canon|Canon DIGITAL IXUS|6.592
+Canon|Canon PowerShot A10|6.721
+Canon|Canon PowerShot A20|6.721
+Canon|Canon PowerShot A100|5.680
+Canon|Canon PowerShot A200|5.680
+Canon|Canon PowerShot A400|6.721
+Canon|Canon PowerShot A20|6.721
+Canon|Canon PowerShot A40|6.721
+Canon|Canon PowerShot A85|6.721
+Canon|Canon PowerShot A95|8.933
+Canon|Canon PowerShot G1|8.933
+Canon|Canon PowerShot G2|8.933
+Canon|Canon PowerShot G3|8.933
+Canon|Canon PowerShot G5|8.933
+Canon|Canon PowerShot G6|8.933
+Canon|Canon PowerShot Pro90 IS|8.933
+Canon|Canon PowerShot S10|8.0
+Canon|Canon PowerShot S20|8.933
+Canon|Canon PowerShot S40|8.933
+Canon|Canon PowerShot S70|8.933
+Canon|Canon PowerShot S330|6.592
+EASTMAN KODAK COMPANY|KODAK CX6330 ZOOM DIGITAL CAMERA|8.933
+EASTMAN KODAK COMPANY|KODAK CX7330 ZOOM DIGITAL CAMERA|6.721
+EASTMAN KODAK COMPANY|KODAK CX7430 ZOOM DIGITAL CAMERA|6.721
+EASTMAN KODAK COMPANY|KODAK CX7530 ZOOM DIGITAL CAMERA|6.721
+EASTMAN KODAK COMPANY|KODAK DX4530 ZOOM DIGITAL CAMERA|8.933
+EASTMAN KODAK COMPANY|KODAK DX6440 ZOOM DIGITAL CAMERA|6.721
+EASTMAN KODAK COMPANY|KODAK DX6490 ZOOM DIGITAL CAMERA|6.721
+EASTMAN KODAK COMPANY|KODAK DX7440 ZOOM DIGITAL CAMERA|6.721
+EASTMAN KODAK COMPANY|KODAK DX7590 ZOOM DIGITAL CAMERA|6.721
+EASTMAN KODAK COMPANY|KODAK DX7630 ZOOM DIGITAL CAMERA|9.5
+EASTMAN KODAK COMPANY|KODAK DC5000 ZOOM DIGITAL CAMERA|9.5
+FUJIFILM|FinePix S602 ZOOM|9.5
+FUJIFILM|FinePix1400Zoom|6.721
+FUJIFILM|FinePix2400Zoom|6.721
+FUJIFILM|FinePix S5100|6.721
+FUJIFILM|FinePix S5200|6.721
+FUJIFILM|FinePix S5500|6.721
+FUJIFILM|FinePix S5600|6.721
+FUJIFILM|FinePix S9000|9.5
+FUJIFILM|FinePix S9500|9.5
+FUJIFILM|FinePix A303|6.721
+FUJIFILM|MX-2700|8.0
+FUJIFILM|MX-2900Z|8.0
+Hewlett-Packard|HP PhotoSmart C812|8.933
+KONICA MINOLTA|MAXXUM 5D|28.262
+KONICA MINOLTA|MAXXUM 7D|28.262
+KONICA MINOLTA|DiMAGE Z5|6.721
+KONICA MINOLTA|DiMAGE Z6|6.721
+KONICA MINOLTA|DiMAGE Z20|6.721
+KONICA MINOLTA|DiMAGE A200|11.0
+Konica Minolta Camera, Inc.|DiMAGE A2|11.0
+Konica Minolta Camera, Inc.|DiMAGE Z2|11.0
+Minolta Co., Ltd.|DiMAGE 5|8.933
+Minolta Co., Ltd.|DiMAGE 7|11.0
+Minolta Co., Ltd.|DiMAGE 7i|11.0
+Minolta Co., Ltd.|DiMAGE 7Hi|11.0
+Minolta Co., Ltd.|DiMAGE 7|11.0
+Minolta Co., Ltd.|DiMAGE A1|11.0
+Minolta Co., Ltd.|DiMAGE X|6.721
+Minolta Co., Ltd.|DiMAGE Xg|6.721
+Minolta Co., Ltd.|DiMAGE Xi|6.721
+Minolta Co., Ltd.|DiMAGE Xt|6.721
+Minolta Co., Ltd.|DiMAGE X20|5.68
+Minolta Co., Ltd.|DiMAGE X50|6.721
+Minolta Co., Ltd.|DiMAGE E223|6.721
+Minolta Co., Ltd.|DiMAGE F100|8.933
+Minolta Co., Ltd.|DiMAGE F300|8.933
+Minolta Co., Ltd.|DiMAGE G400|6.721
+Minolta Co., Ltd.|DiMAGE G600|8.933
+Minolta Co., Ltd.|DiMAGE S404|8.933
+Minolta Co., Ltd.|DiMAGE S414|8.933
+Minolta Co., Ltd.|DiMAGE Z1|6.721
+Minolta Co., Ltd.|DiMAGE Z2|6.721
+NIKON CORPORATION|NIKON D70|28.4
+NIKON CORPORATION|NIKON D1X|28.4
+NIKON CORPORATION|NIKON D2X|28.4
+NIKON|E2500|6.592
+NIKON|E4500|8.933
+NIKON|E5000|11.0
+NIKON|E5700|11.0
+NIKON|E700|6.592
+NIKON|E775|6.592
+NIKON|E800|8.0
+NIKON|E880|8.933
+NIKON|E885|8.933
+NIKON|E950|8.0
+NIKON|E990|8.933
+NIKON|E995|8.933
+OLYMPUS OPTICAL CO.,LTD|C2040Z
+OLYMPUS OPTICAL CO.,LTD|C3030Z
+OLYMPUS OPTICAL CO.,LTD|C4100Z,C4000Z|8.933
+OLYMPUS OPTICAL CO.,LTD|C5050Z|8.933
+OLYMPUS OPTICAL CO.,LTD|E-10|11.0
+OLYMPUS OPTICAL CO.,LTD|E-20|11.0
+SEIKO EPSON CORP.|PhotoPC 3000Z|8.933
+SIGMA|SIGMA SD10|24.878
+SONY|DSC-F828|11.0
+SONY|DSC-D700|8.0
+SONY|DSC-F88|6.721
+SONY|DSC-H1|6.721
+SONY|DSC-H2|7.182
+SONY|DSC-H5|7.182
+SONY|DSC-L1|6.721
+SONY|DSC-P150|8.933
+SONY|DSC-P200|8.933
+SONY|DSC-R1|25.877
+SONY|DSC-S90|6.721
+SONY|DSC-V1|8.933
+SONY|DSC-V3|8.933
+SONY|DSC-W1|8.933
+SONY|DSC-W5|8.933
+SONY|DSC-W7|8.933
+SONY|DSLR-A100|28.4

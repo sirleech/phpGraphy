@@ -1,0 +1,535 @@
+/* 
+   phpGraphy' stylesheet, please customise it as much as you want !
+   and if you got a very nice theme that you want to share, then submit it,
+   perhaps it'll be in the next release
+
+   To change the default size font, modify the font-size element for both body and td,
+   everything else is relative to them.
+*/
+
+
+/**
+ *
+ *General declaration (Mainly about font and colors) 
+ *
+**/
+
+body {
+  font-size:12px;
+  font-family : Verdana,Arial,Geneva,sans-serif;
+  color: #101818;
+  background-color: white;
+}
+
+td { 
+  font-size:12px;
+  font-family : Verdana,Arial,Geneva,sans-serif;
+}
+
+
+a { text-decoration: none }
+
+a:link { color: #79b8c8 } 
+
+a:visited { color: #79b8c8 }
+
+a:active { color: #79b8c8 }
+
+a:hover { 
+  text-decoration: underline;
+  color: #f5beb4;
+  }
+
+a.menu:hover { text-decoration: none }
+
+a.lbmenu:hover { text-decoration: none }
+
+a.lbmenu { text-decoration: none }
+
+
+
+small, .small { 
+  font-size: 75%;
+  font-family : Verdana,Arial,Geneva,sans-serif;
+  }
+
+.small:link {
+  font-size: 75%;
+  font-family : Verdana,Arial,Geneva,sans-serif;
+  color: black;
+  }
+
+.small:visited {
+  font-size: 75%;
+  font-family : Verdana,Arial,Geneva,sans-serif;
+  color: black;
+  }
+
+.medium {
+    font-size: 88%
+	}
+
+.big { font-size: 150%; }
+
+.txt { 
+  font-family : Courier New,sans-serif;
+  }
+
+.notes {
+    margin: 0.3em 0;
+    font-size: 75%;
+    color: #55f;
+}
+
+.errormsg {
+  font-family : Verdana,Arial,Geneva,sans-serif;
+  font-size: 90%;
+  color: red;
+  }
+
+.successmsg {
+  font-family : Verdana,Arial,Geneva,sans-serif;
+  font-size: 90%;
+  font-weight: bold;
+  color: blue;
+  }
+
+
+/**
+ *
+ *  Position and behavior between the differents elements
+ *
+ *  Here is the main page layout
+ *    banner (phpGraphy logo)
+ *    dirbar (Current path (left) and Links (right))
+ *    welcome (.welcome file)
+ *    dirlist (List of directories)
+ *    dircontent (List of files/thumbs) or displaypicture (Lowres/Highres picture)
+ *    pagenav (Page Naviguation, Prev/Next and page number )
+ *    footer
+**/
+
+/* Global container */
+#main {
+  margin: 0 10%;
+  }
+
+/* Default phpGraphy banner */
+#banner {
+  display: block;
+  border: none;
+  margin-bottom: 3px;
+  }
+
+/* Directory information bar (current directory) - not used anymore, now using dirbarleft/right */
+#dirbar {
+  width: 100%;
+  border: none;
+}
+
+/* .welcome (Only displayed on the first page when in thumbs mode) */
+#welcome {
+    clear: left;
+    color: #883333;
+    padding: 5px;
+}
+
+/* display the directory content (directories) */
+#dirlist {
+  float: left;
+  clear: left;
+}
+
+/* display the directory content (files/thumbs) */
+#dircontent {
+  clear: left;
+  width: 100%;
+  margin: 15px 0 0 15px;
+}
+
+#dircontent td {
+  vertical-align: top;
+  padding-bottom: 1.5em;
+}
+
+/* Page naviguation (Previous/Next, Page number) */
+ #pagenav {
+  float: left;
+  clear: left;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+}
+
+
+#footer {
+  clear: left;
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+}
+
+#dirbarleft {
+  float: left;
+  text-align: left;
+  width: 75%;
+  }
+
+#dirbarright {
+  float: right;
+  width: 25%;
+  text-align: right;
+  }
+
+
+/* picture title (displayed when browsing lowres/highres pictures) - along with browse.tpl */
+.title {
+  font-family : Verdana,Arial,Geneva,sans-serif;
+  text-decoration: underline;
+  }
+
+/* Lowres/Highres picture display area - along with display.tpl */
+#pictitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#displaypicture {
+  text-align: center;
+  }
+
+#picnav {
+  margin: 0.2em;
+  }
+
+#picrating span  {
+  display: block;
+  margin: 0.2em;
+  }
+
+#currentrating {
+  margin: 0.5em;
+  }
+
+#metadataicon {
+  margin-left: 5px;
+  }
+
+/* Admin form to change picture's associated data */
+.rotatebutton {
+  background-color : transparent;
+  border: 1px solid;
+  color : #BDD77B;
+}
+
+/* exif metadata text */
+.exifmetadata { 
+  color: #646464;
+  text-align: center;
+  }
+
+/* iptc metadata text */
+.iptcmetadata {
+  color: #a0a0a0;
+  text-align: center;
+  }
+
+/* currently only used for the metadata table (hidden by default) */
+.metadatatable { 
+  background-color: #f5beb4;
+  border: 1px solid;
+  border-spacing: 0px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 8px;
+  }
+.rowbgcolor1 { background-color: #f5beb4; }
+.rowbgcolor2 { background-color: #ffe5e0; }
+
+#commentstitle {
+  float: left;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+#addcomment {
+  float: right;
+}
+
+.commentfrom {
+    display: block;
+    clear: left;
+    width: 100%;
+    text-align: left;
+    margin-top: 12px;
+}
+
+.usercomment {
+    display: block;
+    clear: left;
+    text-align: left;
+    width: 100%;
+}
+
+
+/* thumbnails properties */
+.thumbnail {
+   border: 1px solid black;
+}
+.picthumbnail, .picinfo {
+    float: left;
+}
+.picinfo a, .picinfo span {
+    display: block;
+    padding: .5em 1em 0 1em;
+}
+.picinfo span {
+    font-size: 75%;
+    padding-left: 2em;
+}
+
+.phpg_previewpic img {
+    border: 1px solid;
+}
+
+
+
+/* directory thumbnail */
+
+/* Folder Frame related (draw a nice frame around folder (thx to Jeff for the initial CSS code) */
+
+.fftop         { background: url(images/border-top.gif) repeat-x; }
+.fftop div     { background: url(images/corner-top-left.gif) no-repeat top left; }
+.fftop div div { background: url(images/corner-top-right.gif) no-repeat top right; }
+
+.ffbottom         { background: url(images/border-bottom.gif) repeat-x; }
+.ffbottom div     { background: url(images/corner-bottom-left.gif) no-repeat top left; }
+.ffbottom div div { background: url(images/corner-bottom-right.gif) no-repeat top right; }
+
+.ffcontentwrap { background: url(images/border-left.gif) repeat-y; }
+.ffcontent     { background: url(images/border-right.gif) repeat-y right; }
+
+/* Hack to handle the gap below the border with FireFox (when XHTML doctype is enabled )  */
+.ffcontent a { background-color: #ececec; }
+
+.fftop div, .fftop, .ffbottom div, .ffbottom {
+	/* width: 140px; <=  Not used to be relative - it's added within the code as style argument */
+	height: 20px;
+	font-size: 1px;
+}
+
+.ffcontent {
+    text-align: center;
+    /* width: 140px; <=  Not used to be relative - it's added within the code as style argument */
+}
+
+/* One div per directory, contains a dirframe and a dirtitle */
+.direntry {
+    float: left;
+    margin: 0 15px 0 0;
+    clear: left;
+    width: 700px;
+}
+
+/*  Resides inside direntry, contains dirthumbnail and all the ff* (framefolder) entries) */
+.dirframe {
+    float: left;
+}
+
+/* Resides inside a dirframe */
+.dirthumbnail {
+    border: 1px solid #aaaaaa;
+}
+
+
+/* Used when $directory_display_mode = 'icon' */
+.diricon {
+    border: none;
+    vertical-align: middle;
+    margin: 1px 1px 1px 0.2em;
+}
+
+/* Used when $directory_display_mode = 'picture' */
+.dirtitlepicture {
+    float: left;
+    margin: 15px 0 10px 10px;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.dirinfo {
+    font-size: 80%;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #aaaaaa;
+}
+
+/* Used when $directory_display_mode = 'icon' */
+.dirtitleicon {
+    float: left;
+    margin: 5px 0 5px 5px;
+}
+
+/* Used when $directory_display_mode = 'name' */
+.dirtitlename {
+    margin-left: -15px;
+}
+
+
+
+/* icons properties */
+.icon { border: none }
+
+/* lowres/highres picture properties */
+.picture { 
+  border: 1px solid black;
+  }
+
+.popup {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  }
+
+#loginform table {
+    margin: 5% auto;
+    border: 1px solid #AAAAAA;
+    padding: 50px;
+}
+
+/* login page */
+
+#loginbox {
+    position: relative;
+    width: 300px;
+    margin: 5% auto;
+    border: 1px solid #AAAAAA;
+    padding: 50px;
+}
+
+.margintop {
+    margin-top: 5px;
+}
+
+.floatlabel {
+    width: 8em;
+    float: left;
+    text-align: right;
+    margin: 0 1em 10px 0;
+    clear: both
+}
+
+#userscomments {
+
+}
+
+/* USER MANAGEMENT */
+
+/* USER MANAGEMENT LIST */
+table.um { border-collapse: collapse; border: 2px solid #999; margin: .5em auto; }
+table.um th { font-weight: bold; color: #333; padding: .5em; background-color: #eee; }
+table.um td { border: 1px solid #ddd; padding: .5em; text-align: center; }
+table.um caption { padding: .5em; font-weight: bold; background-color: #eee; border: 2px solid #999; margin: 0 auto; }
+
+/* USER MANAGEMENT EDIT USER INFO */
+#user_management { width: 30em; margin: 1em auto; }
+#bottomForm { text-align: right; font-weight:bold; }
+#bodyForm { background-color: #eee; }
+#bodyForm legend { font-weight: bold; }
+#bodyForm fieldset label { float: left; width: 40%; text-align: right;  padding: 0 .5em 0 0; line-height: 1.8; }
+#bodyForm .legend { font-style: italic; color: #666; }
+
+/*  SLIDESHOW */
+
+#slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#slideshow a {
+    cursor: pointer;
+    z-index: 9;
+}
+
+#slideshow input {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width:1.5em;
+}
+
+#slideshowimg {
+    border: solid 1px black;
+}
+
+
+#close-slideshow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    font-weight: bold;
+}
+
+#spanControl {
+    border: 3px solid #cacaca;
+    background-color: black;
+    color: white;
+    padding: .5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+#spanControl a {
+    margin: 0 .5em;
+}
+
+#spanControl input {
+    color: white;
+    background: black;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#slideshow-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align:center;
+}
+
+/* Show/Hide caption text within the remote control */
+#hidecaptions, #showcaptions {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+/* Where the picture's title get displayed */
+#slideshow-captions {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+
+
+/* DEBUG messages BOX - Reserved for development purposes */
+#debugbox {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: white;
+    z-index: 1;
+    border: solid 1px #ccc;
+}
+
+#debugmsgs {
+    text-align: left;
+    padding: 2px 5px;
+}

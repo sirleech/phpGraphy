@@ -1,0 +1,26 @@
+<?php
+
+/* phpGraphy custom language file
+*
+* This file is an example of what you can achieve by modifying the languages variables.
+* Open a original language file for the complete list of variables you can modify.
+*
+* Rename it to 'lang_cust.inc.php' so that it's taken into account by phpGraphy. 
+*/
+
+// Title of your website
+$txt_site_title="my customized phpGraphy site";
+
+// txt_root_dir: text that specify the root of your gallery
+$txt_root_dir="-root-";
+
+// the following variables defines the text used for navigating the gallery
+// you can change them to fit your needs and also use images (http://tofz.org/ style)
+// e.g: $txt_previous_page='<img src="/gfx/my_previous_image_button.gif">';
+
+// Picture/Thumbs viewing/naviguation
+$txt_files='picture(s)';
+$txt_dirs='album(s)';
+$txt_last_commented="check last comments";
+
+?>

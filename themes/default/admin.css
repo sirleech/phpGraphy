@@ -1,0 +1,215 @@
+/* General form definition */
+
+fieldset, legend {
+    border: solid 1px #ccc;
+}
+
+fieldset {
+    text-align: left;
+    background: #fefefe;
+}
+
+legend {
+    background: #444;
+    color: white;
+    padding: 2px 5px;
+}
+
+label {
+    position: relative;
+    float: left;
+    width: 100px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 110%;
+}
+
+
+fieldset input, fieldset select, fieldset option  {
+    border-width : 1px;
+    border-color : #444;
+    background: #eeeeee;
+    font-size: 90%;
+}
+
+.formfield {
+    margin-top: 0.5em;
+}
+
+
+/* Main button, default action, like submit */
+.button-1 {
+    background: #444;
+    font-size: 110%;
+    color: white;
+}
+
+/* Secondary button, non-default action */
+.button-2 {
+    border-width : 1px;
+    border-color : #444;
+    background: #eeeeee;
+    font-size: 90%;
+}
+
+.button-1, .button-2 {
+    margin: 0.5em;
+}
+
+/* Specific to each form */
+
+#admindirectory {
+    /* Box in the top left corner
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    */
+    margin: 0.5em 0;
+    clear: left;
+}
+
+#rotatebox {
+    float: right;
+}
+
+#adminpicture {
+    margin: 0.5em 0;
+    width: 600px;
+    margin: auto;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+
+/* Admin Menu */
+
+#adminmenu {
+    display: absolute;
+    width: 17em;
+    top: 0px;
+    margin: 0.8em 0 0 0.8em;
+/* FIXME: Make background solid */
+}
+
+#adminmenu a {
+    color: #777;
+}
+
+#adminmenu ul {
+    margin: 0 0 0 0.2em;
+    padding: 0;
+}
+
+#adminmenu li {
+   list-style: none;
+}
+
+
+/* Used on the settings (cnfig editor) page */
+/* Have a look to http://www.simplebits.com/notebook/2003/10/19/styling_nested_lists.html */
+
+#adminconfig input, #adminconfig select {
+    float: right;
+    border-width : 1px;
+    border-color : #444;
+    font-size: 90%;
+}
+
+#configmenu {
+    float: left;
+    width: 10em;
+    font-size: 120%;
+    background: #ddd;
+    color: #999;
+    border: 1px solid #aaa;
+}
+
+#configmenu a {
+    color: #444;
+}
+
+#configmenu a:hover {
+    color: white;
+}
+
+#configmenu ul {
+ /*
+  margin-top: 0.2em;
+  margin-left: -2.2em;
+  */
+    margin: 0.2em 0 0.2em 0.7em;
+    padding: 0;
+}
+
+
+#configmenu li {
+   list-style: none;
+}
+
+/* Main category */
+#configmenu .category {
+    font-weight: bold;
+    margin-top: 0.5em;
+    padding: 0 0 0.2em 0.2em;
+    border-bottom: solid 1px #aaa;
+}
+
+/* Sub-categories */
+#configmenu ul li {
+    font-size: 95%;
+}
+
+#selected {
+    /*padding: 0.05em 0.3em 0.05em 0.1em; */
+    font-weight: bold;
+    color: black;
+}
+
+#advancedbox {
+    border-top: solid 1px #aaa;
+    padding-top: 0.5em;
+    padding-left: 0.2em;
+    font-size: 78%;
+    color: #444;
+}
+
+#advancedbox input {
+    float: none;
+}
+
+
+/* Directives */
+#configdirectives {
+    float: left;
+    margin-left: 1em;
+}
+
+.directive {
+    border: 1px solid #aaa;
+    clear: left;
+    margin-top: 10px;
+    padding: 15px 30px;
+    width: 400px;
+}
+
+.description, .example {
+    padding-top: 15px;
+    margin-top: 5px;
+    font-size: 90%;
+    clear: left;
+
+}
+
+.description {
+    color: #000;
+}
+
+.example {
+    color: #000;
+}
+
+.readonly {
+    color: red;
+    font-size: 85%;
+    margin-bottom: 5px;
+}
+
+

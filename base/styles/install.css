@@ -1,0 +1,140 @@
+h2 {
+    font-size: 11pt;
+}
+
+.annotation {
+    font-size: 90%;
+    color: #556;
+}
+
+#stepsbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#stepsbar li {
+    float: left;
+    margin: 0 0.15em;
+    padding: 0;
+    text-align: center
+}
+
+#stepsbar li {
+    height: 2em;
+    line-height: 2em;
+    /* float: left; */
+    width: 5em;
+    display: block;
+    border: 0.1em solid #dcdce9;
+    text-decoration: none;
+    text-align: center;
+}
+
+.previousstep {
+    background: #aaa;
+    color: #ccc;
+}
+
+.afterstep {
+    background: #ddd;
+    color: #555;
+}
+
+.activestep {
+    background: black;
+    color: white;
+}
+
+#stepsbar {
+    width:40em
+}
+
+#stepcontent {
+    clear: left;
+    margin-top: 3em;
+}
+
+#step-instructions li {
+    margin-top: 15px;
+}
+
+.passed {
+    background: green;
+}
+
+.failed {
+    background: red;
+}
+
+.warning {
+    background: yellow;
+}
+
+.passed, .failed, .warning {
+    color: white;
+    margin-left: 5px;
+    font-size: 9pt;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+    margin-left: 10px;
+    border-style : outset;
+    font-weight : bold;
+    background: black;
+    color: white;
+}
+
+
+hr {
+    margin: 20px;
+    width: 400px;
+    weight: 0.5px;
+}
+
+.margintop {
+    margin-top: 15px;
+}
+
+.invalid-field {
+    font-size: 95%;
+    font-weight: bold;
+    color: red;
+}
+
+.errormsg {
+    margin: 5px;
+    font-weight: bold;
+    color: red;
+}
+
+label {
+    position: relative;
+    float: left;
+    width: 150px;
+}
+
+input, select, option {
+    background: #e5e5e5;
+    font-family: Verdana,Arial,Helvetica,sans-serif;;
+}
+
+input {
+    border-width : 1px;
+    border-color : #444;
+    font-size: 90%;
+}
+
+select, option {
+    color: #333;
+}
+
+#thumb_generator_path {
+    margin-top: 15px;
+}
+
+#rotate_tool_path {
+    margin-top: 15px;
+}

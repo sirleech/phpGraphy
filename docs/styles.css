@@ -1,0 +1,214 @@
+/************************************************************************/
+/* Custom style-sheet stuffs for the Subversion book in HTML form.      */
+/************************************************************************/
+
+BODY
+{
+    background: white;
+    margin: 0.5in;
+    font-family: arial,helvetica,sans-serif;
+	font-size: 12px;
+}
+
+H1.title
+{
+    font-size: 250%;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+H2.subtitle
+{
+    font-size: 150%;
+    font-style: italic;
+    color: black;
+}
+
+H2.title
+{
+    font-size: 150%;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+H3.title
+{
+    font-size: 125%;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+H4.title
+{
+    font-size: 100%;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+.toc B
+{
+    font-size: 125%;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+P,LI,UL,OL,DD,DT
+{
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+}
+
+TT,PRE
+{
+    font-family: courier new,courier,fixed;
+}
+
+.command, .programlisting
+{
+    font-family: courier new,courier,fixed;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.screen
+{
+	background-color: #DDDDDD;
+}
+
+.filename
+{
+    font-family: arial,helvetica,sans-serif;
+    font-style: italic;
+}
+
+A
+{
+    color: #0283EB;
+    text-decoration: underline;
+}	
+
+A:hover 
+{
+    background: #06B2E2;
+    color: blue;
+    text-decoration: underline;
+}
+
+A:visited 
+{
+    color: #0283EB;
+    text-decoration: underline;
+}
+
+IMG
+{
+    border: none;
+}
+
+.figure, .example, .table
+{
+    margin: 0.125in 0.5in;
+}
+
+.table TABLE
+{
+    border: 1px rgb(180,180,200) solid;
+    border-spacing: 0px;
+}
+
+.table TD
+{
+    border: 1px rgb(180,180,200) solid;
+	font-size: 12px;
+}
+
+.table TH
+{
+    background: rgb(180,180,200);
+    border: 1px rgb(180,180,200) solid;
+}
+
+.table P.title, .figure P.title, .example P.title
+{
+    text-align: left !important;
+    font-size: 100% !important;
+}
+
+.author
+{
+    font-size: 100%;
+    font-style: italic;
+    font-weight: normal;
+    color: black;
+}
+
+.sidebar 
+{
+    border: 2px black solid;
+    background: rgb(230,230,235);
+    padding: 0.12in;
+    margin: 0 0.5in;
+}
+
+.sidebar P.title
+{
+    text-align: center;
+    font-size: 125%;
+}
+
+.tip
+{
+    border: black dashed 1px;
+    background: url(./images/p_tip.png) no-repeat;
+    margin: 0.12in 0;
+    padding: 0 40px;
+}
+
+.warning
+{
+    border: black solid 1px;
+    background: url(./images/p_warning.png) no-repeat;
+    margin: 0.12in 0;
+    padding: 0 40px;
+}
+
+.note
+{
+    border: black dashed 1px;
+    background: url(./images/p_note.png) no-repeat;
+    margin: 0.12in 0;
+    padding: 0 40px;
+}
+
+.programlisting, .screen
+{
+    font-family: courier new,courier,fixed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 90%;
+    color: black;
+    margin: 0 0.5in;
+}
+
+.varname
+{
+    font-size: 120%;
+	font-weight: bold;
+}
+
+.navheader, .navfooter
+{
+    border: black solid 1px;
+    background: #95e002;
+}
+
+.navheader HR, .navfooter HR
+{
+    display: none;
+}
