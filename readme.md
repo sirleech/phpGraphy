@@ -1,0 +1,5 @@
+phpGraphy is a free PHP photo gallery script released under GPL license. Since its beginning, it has been written with simplicity and efficiency in mind following the KISS philosophy.
+It should fit many needs, thanks to its easy installation process and minimal requirements, it can be setup in less than 3 min to put a small photo gallery online. For users with thousands of pictures, don't worry as phpGraphy does use a real directory tree to store the pictures (as you probably already have on your hard-drive), you'll just have to upload your whole picture collection et voila, phpGraphy will generate the thumbnails and low-resolution pictures for you and even better, it can also auto-import IPTC description in the database (if already embeded in your pictures).
+It integrates a bunch of nice features like comments, rating, EXIF/IPTC handling, go to the Features page for more details. If you want to see script in action, try the Online Demo. If you want to try-it now, go on the download page.
+
+http://phpgraphy.sourceforge.net/index.php
